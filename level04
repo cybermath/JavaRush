@@ -1,0 +1,45 @@
+package com.javarush.test.level04.lesson06.task02;
+
+/* Максимум четырех чисел
+Ввести с клавиатуры четыре числа, и вывести максимальное из них.
+*/
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Solution
+{
+    public static void main(String[] args) throws Exception
+    {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        String n1 = reader.readLine();
+        String n2 = reader.readLine();
+        String n3 = reader.readLine();
+        String n4 = reader.readLine();
+
+        // Переводить в   тип int
+
+        int m1 = Integer.parseInt(n1);
+        int m2 = Integer.parseInt(n2);
+        int m3 = Integer.parseInt(n3);
+        int m4 = Integer.parseInt(n4);
+
+        if (m1 > m2 && m2 > m3)
+        {
+            if (m1 > m4)
+                System.out.println(m1);
+        }
+        else {
+            if(m2 > m4 && m2 > m3)
+                System.out.println(m2);
+            else if(m3 > m4)
+                System.out.println(m3);
+            else
+                System.out.println(m4);
+        }
+
+        //Напишите тут ваш код
+
+    }
+}
